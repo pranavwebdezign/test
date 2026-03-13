@@ -20,11 +20,6 @@ wp-content/backup*/
 wp-content/backups/
 wp-content/wflogs/
 
-# ── WordPress sensitive config ──────────────────────────────
-wp-config.php
-.env
-.env.*
-!.env.example
 
 # ── Nested git repositories (tracked as separate repos) ────
 # These are standalone projects with their own repos
