@@ -1,0 +1,102 @@
+<?php
+
+namespace Divi_Carousel_Free;
+
+defined('ABSPATH') || exit;
+
+class Admin
+{
+    public function __construct()
+    {
+        add_action('admin_menu', [$this, 'register_menu']);
+        add_action('admin_enqueue_scripts', [$this, 'enqueue_admin_assets']);
+    }
+
+    public function register_menu()
+    {
+        // SVG icon (base64 encoded)
+        $icon_svg = 'data:image/svg+xml;base64,' . base64_encode('<svg width="380" height="379" viewBox="0 0 380 379" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M186.196 0.791016C188.616 -0.262996 191.365 -0.263935 193.784 0.790039L374.294 79.4219C377.758 80.9315 380 84.3522 380 88.1318V290.144C380 293.923 377.758 297.344 374.294 298.854L193.784 377.484C191.365 378.539 188.616 378.539 186.196 377.484L5.70605 298.854C2.24101 297.344 0.000108544 293.924 0 290.145V88.1309C0.000123615 84.3513 2.24102 80.9314 5.70605 79.4219L186.196 0.791016ZM100 119.141C96.4425 119.141 93.5129 120.292 91.2109 122.594L33.4531 180.352C32.206 181.607 31.3184 182.967 30.791 184.432C30.2637 185.897 30 187.466 30 189.141C30.0084 190.815 30.272 192.385 30.791 193.85C31.31 195.314 32.1976 196.674 33.4531 197.93L91.2109 255.688C93.5129 257.989 96.4425 259.141 100 259.141C103.558 259.141 106.487 257.989 108.789 255.688C111.091 253.386 112.242 250.456 112.242 246.898C112.242 243.341 111.091 240.411 108.789 238.109L59.8203 189.141L108.789 140.172C111.091 137.87 112.242 134.94 112.242 131.383C112.242 127.825 111.091 124.896 108.789 122.594C106.487 120.292 103.558 119.141 100 119.141ZM280.206 119.141C276.659 119.141 273.738 120.292 271.442 122.594C269.147 124.896 268 127.825 268 131.383C268 134.94 269.147 137.87 271.442 140.172L320.268 189.141L271.442 238.109C269.147 240.411 268 243.341 268 246.898C268 250.456 269.147 253.386 271.442 255.688C273.738 257.989 276.659 259.141 280.206 259.141C283.753 259.141 286.675 257.989 288.97 255.688L346.558 197.93C347.809 196.674 348.693 195.314 349.211 193.85C349.728 192.385 349.992 190.815 350 189.141C350 187.466 349.737 185.897 349.211 184.432C348.685 182.967 347.801 181.607 346.558 180.352L288.97 122.594C286.675 120.292 283.753 119.141 280.206 119.141ZM116 179.141C110.477 179.141 106 183.618 106 189.141C106 194.663 110.477 199.141 116 199.141H146C151.523 199.141 156 194.663 156 189.141C156 183.618 151.523 179.141 146 179.141H116ZM188 179.141C182.477 179.141 178 183.618 178 189.141C178 194.663 182.477 199.141 188 199.141C193.523 199.141 198 194.663 198 189.141C198 183.618 193.523 179.141 188 179.141ZM228 179.141C222.477 179.141 218 183.618 218 189.141C218 194.663 222.477 199.141 228 199.141C233.523 199.141 238 194.663 238 189.141C238 183.618 233.523 179.141 228 179.141ZM268 179.141C262.477 179.141 258 183.618 258 189.141C258 194.663 262.477 199.141 268 199.141C273.523 199.141 278 194.663 278 189.141C278 183.618 273.523 179.141 268 179.141Z" fill="#192471"/>
+</svg>');
+
+        // Main menu - Dashboard
+        add_menu_page(
+            __('Divi Carousel', 'divi-carousel-free'),
+            __('Divi Carousel', 'divi-carousel-free'),
+            'manage_options',
+            'divi-carousel-free',
+            [$this, 'render_dashboard_page'],
+            $icon_svg,
+            30
+        );
+
+        // Dashboard submenu
+        add_submenu_page(
+            'divi-carousel-free',
+            __('Dashboard', 'divi-carousel-free'),
+            __('Dashboard', 'divi-carousel-free'),
+            'manage_options',
+            'divi-carousel-free',
+            [$this, 'render_dashboard_page']
+        );
+    }
+
+    public function enqueue_admin_assets($hook)
+    {
+        // Only load on our admin pages
+        if (strpos($hook, 'divi-carousel-free') === false) {
+            return;
+        }
+
+        // Get asset file
+        $asset_file = DCF_PLUGIN_DIR . 'dist/admin.asset.php';
+        $asset_info = file_exists($asset_file) ? include $asset_file : [
+            'dependencies' => [],
+            'version' => DCF_PLUGIN_VERSION,
+        ];
+
+        // Enqueue admin script
+        wp_enqueue_script(
+            'divi-carousel-free-admin',
+            DCF_PLUGIN_URL . 'dist/admin.js',
+            array_merge(
+                $asset_info['dependencies'],
+                ['wp-element', 'wp-api-fetch', 'wp-i18n']
+            ),
+            $asset_info['version'],
+            true
+        );
+
+        // Enqueue admin styles
+        wp_enqueue_style(
+            'divi-carousel-free-admin',
+            DCF_PLUGIN_URL . 'dist/admin.css',
+            [],
+            $asset_info['version']
+        );
+
+        // Set up REST API for wp-api-fetch
+        wp_add_inline_script(
+            'wp-api-fetch',
+            sprintf(
+                'wp.apiFetch.use( wp.apiFetch.createNonceMiddleware( %s ) );',
+                wp_json_encode(wp_create_nonce('wp_rest'))
+            ),
+            'after'
+        );
+
+        // Localize script
+        wp_localize_script('divi-carousel-free-admin', 'dcfAdmin', [
+            'apiUrl' => rest_url('divi-carousel-free/v1'),
+            'nonce' => wp_create_nonce('wp_rest'),
+            'pluginUrl' => DCF_PLUGIN_URL,
+            'version' => DCF_PLUGIN_VERSION,
+            'restUrl' => rest_url(),
+        ]);
+    }
+
+    public function render_dashboard_page()
+    {
+        echo '<div id="divi-carousel-free-admin-root"></div>';
+    }
+}

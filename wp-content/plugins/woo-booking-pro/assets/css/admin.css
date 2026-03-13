@@ -1,0 +1,42 @@
+/* WooBooking Pro – Admin Styles */
+.wbp-wrap h1 { display: flex; align-items: center; gap: 8px; }
+.wbp-wrap h1 .dashicons { font-size: 28px; color: #2c7be5; }
+.wbp-form-table th { width: 240px; vertical-align: top; padding-top: 18px; }
+.wbp-form-table td { padding: 12px 0; }
+
+/* Zone cards */
+.wbp-zone-card { margin-bottom: 20px; }
+.wbp-zone-card .postbox-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.wbp-zone-card .postbox-header input.wbp-z-name {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+.wbp-zone-card .inside { padding: 16px; }
+
+#wbp-add-zone { margin-bottom: 12px; }
+
+/* Admin media upload */
+#wbp-banner-preview { border-radius: 4px; border: 1px solid #ddd; max-height: 200px; object-fit: cover; }
+
+/* Country rows */
+.wbp-country-row { margin-bottom: 16px; }
+.wbp-country-row .postbox-header { cursor: default; }
+.wbp-c-field { min-width: 140px; }
+.wbp-c-field label { display: block; }
+.wbp-c-field strong { display: block; margin-bottom: 4px; font-size: 12px; text-transform: uppercase; color: #555; letter-spacing: .4px; }
+
+/* Zone country badge */
+.wbp-zone-country-badge { font-size:13px; white-space:nowrap; }
+
+/* Zone filter radio */
+#wbp-zone-filter { background:#f9f9f9; border:1px solid #e0e0e0; padding:10px 16px; border-radius:4px; margin-bottom:16px; }

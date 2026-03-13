@@ -1,0 +1,557 @@
+# Copyright (C) 2025 All in One SEO Team
+# This file is distributed under the same license as the AIOSEO - Author SEO (E-E-A-T) plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: AIOSEO - Author SEO (E-E-A-T) 1.2.6\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aioseo-eeat\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-10-31T12:13:28+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: aioseo-eeat\n"
+
+#. Plugin Name of the plugin
+#: aioseo-eeat.php
+msgid "AIOSEO - Author SEO (E-E-A-T)"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: aioseo-eeat.php
+msgid "https://aioseo.com"
+msgstr ""
+
+#. Description of the plugin
+#: aioseo-eeat.php
+msgid "Adds E-E-A-T support for authors to All in One SEO."
+msgstr ""
+
+#. Author of the plugin
+#: aioseo-eeat.php
+msgid "All in One SEO Team"
+msgstr ""
+
+#: app/Eeat.php:235
+msgid "Plugin is missing required dependencies. Please contact support for more information."
+msgstr ""
+
+#: app/Ui/AuthorTooltip.php:108
+msgid "You must first assign an author, save the post and reload before this block can be rendered."
+msgstr ""
+
+#: app/Ui/ReviewerTooltip.php:111
+msgid "You must first assign a reviewer, save the post and reload before this block can be rendered."
+msgstr ""
+
+#: app/Ui/Ui.php:82
+#: app/Views/AuthorBioCompact.php:66
+#: app/Views/AuthorTooltip.php:112
+#: app/Views/ReviewerTooltip.php:119
+msgid "See Full Bio"
+msgstr ""
+
+#: app/Ui/Ui.php:83
+msgid "Education:"
+msgstr ""
+
+#: app/Ui/Ui.php:84
+msgid "Written By:"
+msgstr ""
+
+#: app/Ui/Ui.php:85
+msgid "Reviewed By:"
+msgstr ""
+
+#: app/Ui/Ui.php:86
+msgid "author avatar"
+msgstr ""
+
+#: app/Ui/Ui.php:87
+msgid "reviewer avatar"
+msgstr ""
+
+#: app/Ui/Ui.php:88
+msgid "social network icon"
+msgstr ""
+
+#: app/Views/AuthorBio.php:29
+#: app/Views/AuthorBioCompact.php:17
+msgid "Below is a sample of how this block will look in posts & author archives:"
+msgstr ""
+
+#: languages/aioseo-eeat.php:6
+msgid "A detailed description of the author. This information will be used inside the author biography block."
+msgstr ""
+
+#: languages/aioseo-eeat.php:9
+msgid "A short description of the author. This information will be used inside the compact author biography block and reviewer tooltip."
+msgstr ""
+
+#: languages/aioseo-eeat.php:13
+msgid "Add Item"
+msgstr ""
+
+#: languages/aioseo-eeat.php:16
+msgid "Additional URLs to help identify the item (e.g. \"https://en.wikipedia.org/wiki/Amazon_(company)\")."
+msgstr ""
+
+#: languages/aioseo-eeat.php:19
+msgid "Alumni Of"
+msgstr ""
+
+#: languages/aioseo-eeat.php:23
+msgid "Append Author Bio to Posts"
+msgstr ""
+
+#: languages/aioseo-eeat.php:27
+msgid "Are you sure you want to leave? you have unsaved changes!"
+msgstr ""
+
+#: languages/aioseo-eeat.php:30
+msgid "Author Bio"
+msgstr ""
+
+#: languages/aioseo-eeat.php:33
+msgid "Author Bio URL"
+msgstr ""
+
+#: languages/aioseo-eeat.php:36
+msgid "Author Excerpt"
+msgstr ""
+
+#: languages/aioseo-eeat.php:39
+msgid "Author Experience Topics (E-E-A-T)"
+msgstr ""
+
+#: languages/aioseo-eeat.php:42
+msgid "Author Image"
+msgstr ""
+
+#: languages/aioseo-eeat.php:45
+msgid "Author Info"
+msgstr ""
+
+#: languages/aioseo-eeat.php:48
+msgid "Awards"
+msgstr ""
+
+#: languages/aioseo-eeat.php:53
+msgid "Block Settings"
+msgstr ""
+
+#. Translators: 1 - Opening <code> tag, 2 - Closing </code> tag.
+#: languages/aioseo-eeat.php:57
+#, php-format
+msgid "Choose whether %1$s should automatically append a compact author bio at the end of every post. You can also manually insert the author bio using the Author Bio block."
+msgstr ""
+
+#. Translators: 1 - The short plugin name ("AIOSEO"), 2 - "Learn More" link.
+#: languages/aioseo-eeat.php:61
+#, php-format
+msgid "Choose whether %1$s should automatically append a compact author bio block to all posts written by this user. %2$s"
+msgstr ""
+
+#: languages/aioseo-eeat.php:65
+msgid "Delete"
+msgstr ""
+
+#: languages/aioseo-eeat.php:68
+msgid "Employer"
+msgstr ""
+
+#: languages/aioseo-eeat.php:71
+msgid "Enable"
+msgstr ""
+
+#: languages/aioseo-eeat.php:74
+msgid "Enable Author Info"
+msgstr ""
+
+#: languages/aioseo-eeat.php:77
+msgid "Enter a URL and press enter"
+msgstr ""
+
+#: languages/aioseo-eeat.php:80
+msgid "Enter any awards the author has received"
+msgstr ""
+
+#: languages/aioseo-eeat.php:83
+msgid "Enter the languages spoken by the author"
+msgstr ""
+
+#: languages/aioseo-eeat.php:86
+msgid "Include All Post Types"
+msgstr ""
+
+#: languages/aioseo-eeat.php:89
+msgid "Institution Name"
+msgstr ""
+
+#: languages/aioseo-eeat.php:92
+msgid "Institution URL"
+msgstr ""
+
+#: languages/aioseo-eeat.php:95
+msgid "Job Title"
+msgstr ""
+
+#: languages/aioseo-eeat.php:98
+msgid "Knows About"
+msgstr ""
+
+#: languages/aioseo-eeat.php:101
+msgid "Name"
+msgstr ""
+
+#: languages/aioseo-eeat.php:104
+msgid "No users were found."
+msgstr ""
+
+#: languages/aioseo-eeat.php:107
+msgid "Post Types"
+msgstr ""
+
+#: languages/aioseo-eeat.php:110
+msgid "Press enter to add an award"
+msgstr ""
+
+#: languages/aioseo-eeat.php:113
+msgid "Press enter to create a language"
+msgstr ""
+
+#: languages/aioseo-eeat.php:116
+msgid "Press enter to insert a URL"
+msgstr ""
+
+#: languages/aioseo-eeat.php:119
+msgid "Reviewer"
+msgstr ""
+
+#: languages/aioseo-eeat.php:122
+msgid "Same As URLs"
+msgstr ""
+
+#: languages/aioseo-eeat.php:125
+msgid "Search for a topic..."
+msgstr ""
+
+#: languages/aioseo-eeat.php:128
+msgid "Select the post types for which you want to automatically inject an author bio."
+msgstr ""
+
+#: languages/aioseo-eeat.php:131
+msgid "Settings"
+msgstr ""
+
+#: languages/aioseo-eeat.php:136
+msgid "Show \"See Full Bio\" link"
+msgstr ""
+
+#: languages/aioseo-eeat.php:139
+msgid "Show Compact Author Bio"
+msgstr ""
+
+#: languages/aioseo-eeat.php:143
+msgid "Show Image"
+msgstr ""
+
+#: languages/aioseo-eeat.php:147
+msgid "Show Label"
+msgstr ""
+
+#: languages/aioseo-eeat.php:151
+msgid "Show Tooltip"
+msgstr ""
+
+#: languages/aioseo-eeat.php:154
+msgid "Spoken Languages"
+msgstr ""
+
+#: languages/aioseo-eeat.php:157
+msgid "The custom URL of the author bio page"
+msgstr ""
+
+#: languages/aioseo-eeat.php:160
+msgid "The fields below provide structured information for search engines about the current author. By filling out these fields, you will enhance your online presence and improve search engine visibility. This increases the chances of your author details appearing prominently in search results, making it easier for readers, publishers, and media representatives to discover and connect with you."
+msgstr ""
+
+#: languages/aioseo-eeat.php:165
+msgid "The following function arguments can be used to override the default settings:"
+msgstr ""
+
+#. Translators: 1 - Opening <code> tag, 2 - Closing </code> tag.
+#: languages/aioseo-eeat.php:169
+#, php-format
+msgid "The following settings will be added directly to an author's schema meta data via the %1$sknowsAbout%2$s property. This property helps with the Experience aspect of Google's E-E-A-T guidelines. After setting the global options here, you can add them directly in an authors profile page."
+msgstr ""
+
+#: languages/aioseo-eeat.php:174
+msgid "The following shortcode attributes can be used to override the default settings:"
+msgstr ""
+
+#. Translators: 1 - "Learn More" link.
+#: languages/aioseo-eeat.php:178
+#, php-format
+msgid "The full author bio block requires a higher plan. %1$s"
+msgstr ""
+
+#: languages/aioseo-eeat.php:181
+msgid "The job title of the author."
+msgstr ""
+
+#: languages/aioseo-eeat.php:184
+msgid "The name of the item the author knows about (e.g. \"Amazon\")."
+msgstr ""
+
+#: languages/aioseo-eeat.php:187
+msgid "The organization the author works for."
+msgstr ""
+
+#: languages/aioseo-eeat.php:190
+msgid "The school, college, or university where the author studied."
+msgstr ""
+
+#. Translators: 1 - Opening anchor tag, 2 - Closing anchor tag.
+#: languages/aioseo-eeat.php:194
+#, php-format
+msgid "The topics and areas of expertise the author writes about. You can add topics through the %1$sSearch Appearance > Author SEO > Author Experience Topics%2$s settings panel."
+msgstr ""
+
+#. Translators: 1 - The short plugin name ("AIOSEO").
+#: languages/aioseo-eeat.php:198
+#, php-format
+msgid "The URL for the author's biography page. If left blank, %1$s will use the author archive page."
+msgstr ""
+
+#: languages/aioseo-eeat.php:201
+msgid "The URL of the item the author knows about (e.g. \"https://amazon.com\")."
+msgstr ""
+
+#: languages/aioseo-eeat.php:204
+msgid "The URL of the school, college, or university where the author studied."
+msgstr ""
+
+#: languages/aioseo-eeat.php:207
+msgid "Type to search for a reviewer"
+msgstr ""
+
+#: languages/aioseo-eeat.php:210
+msgid "Upload an image of the author. We recommend an image with a 1:1 aspect ratio. If no image is set, the user's Gravatar will be used."
+msgstr ""
+
+#: languages/aioseo-eeat.php:213
+msgid "URL"
+msgstr ""
+
+#: languages/aioseo-eeat.php:216
+msgid "Use Default Setting"
+msgstr ""
+
+#: languages/aioseo-eeat.php:219
+msgid "Use the following PHP code anywhere in your theme's post templates or author archive template to display a bio for the author."
+msgstr ""
+
+#: languages/aioseo-eeat.php:222
+msgid "Use the following PHP code anywhere in your theme's post templates to display a bio for the post author."
+msgstr ""
+
+#: languages/aioseo-eeat.php:225
+msgid "Use the following PHP code anywhere in your theme's post templates to display a bio for the post reviewer."
+msgstr ""
+
+#: languages/aioseo-eeat.php:228
+msgid "Use the following shortcode to display the author bio."
+msgstr ""
+
+#: languages/aioseo-eeat.php:231
+msgid "Use the following shortcode to display the author name."
+msgstr ""
+
+#: languages/aioseo-eeat.php:234
+msgid "Use the following shortcode to display the reviewer name."
+msgstr ""
+
+#. Translators: 1 - The default value.
+#: languages/aioseo-eeat.php:243
+#, php-format
+msgid "Whether the \"See Full Bio\" link should be output or not. Defaults to %1$s."
+msgstr ""
+
+#. Translators: 1 - The default value.
+#: languages/aioseo-eeat.php:248
+#, php-format
+msgid "Whether the compact author bio should be output or not. Defaults to %1$s."
+msgstr ""
+
+#. Translators: 1 - The default value.
+#: languages/aioseo-eeat.php:253
+#, php-format
+msgid "Whether to display the \"Reviewed By\" label or not. Defaults to %1$s."
+msgstr ""
+
+#. Translators: 1 - The default value.
+#: languages/aioseo-eeat.php:258
+#, php-format
+msgid "Whether to display the \"Written By\" label or not. Defaults to %1$s."
+msgstr ""
+
+#. Translators: 1 - The default value.
+#: languages/aioseo-eeat.php:263
+#, php-format
+msgid "Whether to display the author image or not. Defaults to %1$s."
+msgstr ""
+
+#. Translators: 1 - The default value.
+#: languages/aioseo-eeat.php:270
+#, php-format
+msgid "Whether to display the popup when someone hovers over the name or not. Defaults to %1$s."
+msgstr ""
+
+#. Translators: 1 - The default value.
+#: languages/aioseo-eeat.php:275
+#, php-format
+msgid "Whether to display the reviewer image or not. Defaults to %1$s."
+msgstr ""
+
+#: languages/aioseo-eeat.php:278
+msgid "Your Author Bio URL is invalid. Please check the format and try again."
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+msgctxt "block title"
+msgid "AIOSEO - Author Bio"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+msgctxt "block description"
+msgid "Easily add an SEO-friendly author bio to your content for enhanced E-E-A-T."
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "author"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "author bio"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "author biography"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+msgctxt "block keyword"
+msgid "author box"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "author profile"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "author information"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "author details"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "author description"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "bio"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "biography"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "description"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "information"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-bio/block.json
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "profile"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-tooltip/block.json
+msgctxt "block title"
+msgid "AIOSEO - Author Name"
+msgstr ""
+
+#: src/vue/standalone/blocks/author-tooltip/block.json
+msgctxt "block description"
+msgid "Easily output the name of the post author in your content for enhanced E-E-A-T."
+msgstr ""
+
+#: src/vue/standalone/blocks/author-tooltip/block.json
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "author name"
+msgstr ""
+
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block title"
+msgid "AIOSEO - Reviewer Name"
+msgstr ""
+
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block description"
+msgid "Easily output the name of the post reviewer in your content for enhanced E-E-A-T."
+msgstr ""
+
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "reviewer"
+msgstr ""
+
+#: src/vue/standalone/blocks/reviewer-tooltip/block.json
+msgctxt "block keyword"
+msgid "review"
+msgstr ""

@@ -1,0 +1,464 @@
+/* =====================================================
+   WooBooking Pro – Frontend Styles
+   ===================================================== */
+
+/* ── Loading spinner ── */
+.wbp-loading {
+    position: fixed; inset: 0;
+    background: rgba(255,255,255,.75);
+    z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+}
+.wbp-spinner {
+    width: 48px; height: 48px;
+    border: 5px solid #e0e0e0;
+    border-top-color: #2c7be5;
+    border-radius: 50%;
+    animation: wbp-spin .8s linear infinite;
+}
+@keyframes wbp-spin { to { transform: rotate(360deg); } }
+
+/* ── Booking wrapper ── */
+.wbp-booking-wrapper {
+    position: relative;
+    font-family: inherit;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+    box-sizing: border-box;
+}
+
+/* ── Step indicators ── */
+.wbp-step-indicators {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 24px 0 32px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 32px;
+}
+.wbp-step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 100px;
+    text-align: center;
+}
+.wbp-step-icon img { height: 56px; width: auto; margin-bottom: 8px; }
+.wbp-step-num {
+    display: inline-flex;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: #2c7be5;
+    color: #fff;
+    font-size: 22px; font-weight: 700;
+    align-items: center; justify-content: center;
+    margin-bottom: 8px;
+}
+.wbp-step-label p { font-size: 13px; color: #555; margin: 0; }
+
+/* ── Sections ── */
+.wbp-section { padding: 0 0 24px; }
+.wbp-container { max-width: 760px; margin: 0 auto; }
+.wbp-section-head { margin-bottom: 24px; }
+.wbp-section-head h2 { font-size: 22px; font-weight: 700; margin: 0 0 8px; color: #1a1a1a; }
+.wbp-section-head p  { color: #666; margin: 0; font-size: 15px; }
+
+/* ─────────────────────────────────────────
+   STEP 1 – POSTCODE SEARCH
+───────────────────────────────────────── */
+.wbp-country-info-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0f6ff;
+    border: 1px solid #c5daf7;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a3c6e;
+}
+.wbp-country-info-bar code {
+    background: #dde9f9;
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-size: 13px;
+    letter-spacing: .5px;
+}
+
+/* Postcode field wrapper */
+.wbp-postcode-field-wrap { margin-bottom: 12px; }
+.wbp-postcode-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.wbp-postcode-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    z-index: 1;
+}
+.wbp-postcode-input {
+    width: 100%;
+    padding: 14px 16px 14px 44px;
+    border: 2px solid #dde3ec;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #1a1a1a;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border-color .2s, box-shadow .2s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.wbp-postcode-input::placeholder { color: #aab; }
+.wbp-postcode-input:focus {
+    outline: none;
+    border-color: #2c7be5;
+    box-shadow: 0 0 0 3px rgba(44,123,229,.15);
+}
+
+/* Google autocomplete dropdown – fix z-index conflicts */
+.pac-container { z-index: 99999 !important; }
+
+/* Country selector */
+.wbp-country-selector { margin-bottom: 16px; }
+.wbp-field-label { display: block; margin-bottom: 6px; font-size: 14px; color: #333; }
+.wbp-country-select-wrap select,
+.wbp-country-select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #dde3ec;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* ── Errors ── */
+.wbp-error {
+    color: #c0392b;
+    background: #fdf3f2;
+    border: 1px solid #f5c6c0;
+    border-radius: 6px;
+    padding: 9px 14px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+.wbp-err-inline { color: #c0392b; font-size: 13px; display: block; margin-top: 4px; }
+
+/* ── Nav row (prev/next buttons) ── */
+.wbp-nav-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+}
+.wbp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter .15s, transform .1s;
+    text-decoration: none;
+}
+.wbp-btn:active { transform: scale(.98); }
+.wbp-btn-next, #wbp-add-to-cart {
+    background: #2c7be5;
+    color: #fff;
+}
+.wbp-btn-next:hover, #wbp-add-to-cart:hover { filter: brightness(1.1); }
+.wbp-btn-prev {
+    background: #f0f0f0;
+    color: #444;
+}
+.wbp-btn-prev:hover { background: #e0e0e0; }
+
+/* ─────────────────────────────────────────
+   STEP 2 – SERVICE SELECTION
+───────────────────────────────────────── */
+.wbp-delivery-info-bar {
+    background: #f0f6ff;
+    border-left: 4px solid #2c7be5;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-radius: 0 6px 6px 0;
+}
+.wbp-radio-group { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+.wbp-service-desc { font-size: 14px; color: #555; margin-top: 8px; }
+
+/* Service / sub-category cards */
+.wbp-card-option {
+    position: relative;
+    cursor: pointer;
+    flex: 1 1 200px;
+    max-width: 280px;
+}
+.wbp-card-option input[type="radio"],
+.wbp-card-option input[type="checkbox"] {
+    position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none;
+}
+.wbp-card-option label {
+    display: block;
+    border: 2px solid #dde3ec;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+    transition: border-color .2s, box-shadow .2s, background .2s;
+    background: #fff;
+    height: 100%;
+    box-sizing: border-box;
+}
+.wbp-card-option label:hover { border-color: #aac4f0; }
+.wbp-card-option input:checked + label {
+    border-color: #2c7be5;
+    background: #f0f6ff;
+    box-shadow: 0 0 0 3px rgba(44,123,229,.15);
+}
+.wbp-card-img {
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 120px;
+    margin-bottom: 10px;
+}
+.wbp-card-img img { width: 100%; height: 120px; object-fit: cover; display: block; }
+.wbp-card-option label h2 { font-size: 15px; font-weight: 600; margin: 0 0 4px; }
+.wbp-card-option label p  { font-size: 13px; color: #666; margin: 0; }
+.wbp-card-option label .wbp-price-tag { font-size: 14px; font-weight: 700; color: #2c7be5; margin-top: 6px; }
+
+/* ─────────────────────────────────────────
+   STEP 3 – PRODUCTS + ADD-ONS
+───────────────────────────────────────── */
+.wbp-product-selection-section { margin: 0 0 16px; }
+.wbp-product-selection { display: flex; flex-wrap: wrap; gap: 14px; }
+.wbp-product-selection-full { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Product cards (same structure as service cards) */
+.product-selection-tabs { position: relative; cursor: pointer; flex: 1 1 180px; max-width: 240px; }
+.product-selection-tabs input[type=radio],
+.product-selection-tabs input[type=checkbox] { position: absolute; opacity: 0; width: 0; height: 0; }
+.product-selection-tabs label {
+    display: block;
+    border: 2px solid #dde3ec;
+    border-radius: 10px;
+    padding: 14px;
+    cursor: pointer;
+    background: #fff;
+    transition: border-color .2s, background .2s, box-shadow .2s;
+}
+.product-selection-tabs label:hover { border-color: #aac4f0; }
+.product-selection-tabs input:checked + label {
+    border-color: #2c7be5;
+    background: #f0f6ff;
+    box-shadow: 0 0 0 3px rgba(44,123,229,.15);
+}
+.product-selection-tabs .thumbnail-image img { max-width: 100%; border-radius: 6px; margin-bottom: 8px; }
+.product-selection-tabs h2 { font-size: 14px; font-weight: 600; margin: 0 0 4px; }
+.product-selection-tabs p  { font-size: 13px; color: #666; margin: 0 0 6px; }
+.product-selection-tabs .amount-box { font-weight: 700; color: #2c7be5; font-size: 14px; }
+
+/* Nationwide items (checkbox list) */
+.product-selection-tabs-full { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.product-selection-tabs-full input { accent-color: #2c7be5; width: 16px; height: 16px; }
+.product-selection-tabs-full label { font-size: 14px; cursor: pointer; }
+.product-selection-tabs-full .product-price { font-weight: 600; color: #2c7be5; }
+
+/* ─────────────────────────────────────────
+   ADD-ON GROUPS
+───────────────────────────────────────── */
+#wbp-product-meta-data { margin: 8px 0; }
+.on-select-show { margin: 16px 0; }
+
+.wbp-addon-group { margin: 20px 0; }
+.wbp-addon-title { font-size: 15px; font-weight: 700; margin: 0 0 3px; color: #1a1a1a; }
+.wbp-addon-desc  { color: #666; font-size: 13px; margin: 0 0 12px; }
+.wbp-addon-options {
+    display: flex; flex-wrap: wrap; gap: 10px;
+}
+.wbp-addon-option {
+    position: relative;
+    flex: 0 0 calc(50% - 5px);
+}
+@media (max-width: 600px) { .wbp-addon-option { flex: 0 0 100%; } }
+
+/* Hidden native checkbox/radio */
+.wbp-addon-input {
+    position: absolute; opacity: 0;
+    width: 0; height: 0; pointer-events: none;
+}
+/* Card label */
+.wbp-addon-label {
+    display: flex; align-items: center; gap: 10px;
+    padding: 11px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #fff;
+    transition: border-color .15s, background .15s;
+    user-select: none;
+}
+.wbp-addon-label:hover { border-color: #aac4f0; }
+.wbp-addon-input:checked + .wbp-addon-label { border-color: #2c7be5; background: #f0f6ff; }
+
+/* Custom check/radio indicator */
+.wbp-addon-check {
+    flex-shrink: 0;
+    width: 18px; height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    transition: background .15s, border-color .15s;
+    position: relative;
+}
+input[type="radio"].wbp-addon-input + .wbp-addon-label .wbp-addon-check { border-radius: 50%; }
+.wbp-addon-input:checked + .wbp-addon-label .wbp-addon-check {
+    background: #2c7be5; border-color: #2c7be5;
+}
+.wbp-addon-input:checked + .wbp-addon-label .wbp-addon-check::after {
+    content: '';
+    position: absolute;
+    top: 2px; left: 5px;
+    width: 5px; height: 9px;
+    border: 2px solid #fff;
+    border-top: none; border-left: none;
+    transform: rotate(45deg);
+}
+input[type="radio"].wbp-addon-input:checked + .wbp-addon-label .wbp-addon-check::after {
+    top: 3px; left: 3px;
+    width: 6px; height: 6px;
+    border: none; background: #fff;
+    border-radius: 50%; transform: none;
+}
+.wbp-addon-name  { flex: 1; font-size: 14px; font-weight: 500; line-height: 1.3; }
+.wbp-addon-price { font-size: 13px; font-weight: 700; color: #2c7be5; white-space: nowrap; }
+
+/* Select/text/multiplier addon inputs */
+.wbp-addon-select,
+.wbp-addon-text,
+.wbp-addon-textarea,
+.wbp-addon-customprice {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 6px;
+    box-sizing: border-box;
+    background: #fff;
+    transition: border-color .15s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.wbp-addon-select:focus,
+.wbp-addon-text:focus,
+.wbp-addon-textarea:focus,
+.wbp-addon-customprice:focus { border-color: #2c7be5; outline: none; }
+.wbp-addon-textarea  { resize: vertical; min-height: 80px; }
+.wbp-addon-multiplier {
+    width: 90px; display: inline-block;
+    padding: 8px 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px; font-size: 14px;
+    text-align: center; margin-top: 6px;
+    transition: border-color .15s;
+}
+.wbp-addon-multiplier:focus { border-color: #2c7be5; outline: none; }
+
+/* ─────────────────────────────────────────
+   ORDER SUMMARY TABLE
+───────────────────────────────────────── */
+.wbp-order-summary { margin: 24px 0; }
+.wbp-order-summary h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+.wbp-order-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.wbp-order-table thead th {
+    background: #f5f7fa; padding: 10px 14px;
+    text-align: left; border-bottom: 2px solid #e0e0e0;
+    font-weight: 600;
+}
+.wbp-order-table tbody tr:nth-child(even) { background: #fafafa; }
+.wbp-order-table tbody th,
+.wbp-order-table tbody td { padding: 9px 14px; border-bottom: 1px solid #eee; }
+.wbp-order-table tbody tr:last-child th,
+.wbp-order-table tbody tr:last-child td {
+    font-weight: 700; font-size: 15px; border-bottom: none;
+    background: #f5f7fa;
+}
+.wbp-info-icon { color: #2c7be5; cursor: help; font-style: normal; }
+
+/* ─────────────────────────────────────────
+   BOOKING DATES
+───────────────────────────────────────── */
+.wbp-divider { border: 0; border-top: 1px solid #e8e8e8; margin: 24px 0; }
+.wbp-booking-dates h2 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.wbp-booking-dates > p { color: #666; margin-bottom: 20px; font-size: 14px; }
+
+.wbp-date-row { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 20px; }
+.wbp-date-col { flex: 1 1 240px; }
+.wbp-date-col label { display: block; }
+.wbp-date-col strong { display: block; margin-bottom: 6px; font-size: 14px; }
+
+.wbp-date-input {
+    width: 100%; padding: 12px 16px 12px 40px;
+    border: 2px solid #dde3ec; border-radius: 8px;
+    font-size: 14px; box-sizing: border-box; background: #fff;
+    transition: border-color .2s; cursor: pointer;
+}
+.wbp-date-input:focus { outline: none; border-color: #2c7be5; box-shadow: 0 0 0 3px rgba(44,123,229,.12); }
+
+/* Icon wrap for date inputs */
+.wbp-input-icon-wrap { position: relative; }
+.wbp-input-icon-wrap .wbp-icon {
+    position: absolute; left: 12px; top: 50%;
+    transform: translateY(-50%);
+    color: #999; pointer-events: none; font-size: 14px;
+}
+
+/* Notes textarea */
+.wbp-notes-area { margin-top: 20px; }
+.wbp-notes-area strong { display: block; margin-bottom: 6px; font-size: 14px; }
+.wbp-notes-textarea {
+    width: 100%; height: 100px; resize: vertical;
+    padding: 12px; border: 2px solid #dde3ec; border-radius: 8px;
+    font-size: 14px; box-sizing: border-box; background: #fff;
+    transition: border-color .2s;
+}
+.wbp-notes-textarea:focus { outline: none; border-color: #2c7be5; }
+
+/* ── T&C row ── */
+.wbp-terms-row { margin: 20px 0 4px; font-size: 14px; line-height: 1.5; }
+.wbp-terms-row label { display: flex; align-items: flex-start; gap: 8px; cursor: pointer; }
+.wbp-terms-row input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; accent-color: #2c7be5; }
+.wbp-terms-row a { color: #2c7be5; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .wbp-booking-wrapper { padding: 0 10px 30px; }
+    .wbp-card-option { flex: 0 0 100%; max-width: 100%; }
+    .wbp-product-selection { gap: 10px; }
+    .wbp-date-row { gap: 14px; }
+    .wbp-btn { padding: 11px 20px; font-size: 14px; }
+    .wbp-section-head h2 { font-size: 19px; }
+    .wbp-postcode-input { font-size: 15px; }
+    .wbp-step-num { width: 38px; height: 38px; font-size: 18px; }
+}

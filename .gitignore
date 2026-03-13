@@ -1,0 +1,65 @@
+# ── Docker / Database volumes ──────────────────────────────
+docker/volumes/
+*.sock
+*.pid
+
+# ── WordPress Core files (these should not be committed) ───
+wp-admin/
+wp-includes/
+wp-*.php
+xmlrpc.php
+readme.html
+license.txt
+index.php
+
+# ── WordPress uploads & generated files ────────────────────
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup*/
+wp-content/backups/
+wp-content/wflogs/
+
+# ── WordPress sensitive config ──────────────────────────────
+wp-config.php
+.env
+.env.*
+!.env.example
+
+# ── Nested git repositories (tracked as separate repos) ────
+# These are standalone projects with their own repos
+ai-agent/
+ai-portal-mui/
+ai-portal-agency/
+
+# ── Node / build artifacts ──────────────────────────────────
+node_modules/
+dist/
+build/
+.next/
+package-lock.json
+
+# ── Zip / archive files ─────────────────────────────────────
+*.zip
+
+# ── OS files ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Log / debug files ──────────────────────────────────────
+*.log
+*.txt
+backend-error.txt
+backend-full.txt
+docker-verbose.txt
+docker-verbose2.txt
+docker-frontend-build.txt
+latest-err.txt
+login-resp.txt

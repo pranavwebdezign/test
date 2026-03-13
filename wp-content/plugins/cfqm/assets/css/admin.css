@@ -1,0 +1,62 @@
+/*
+ * ChangeFluent Quote Manager — Admin CSS
+ */
+
+/* ── Stat cards ─────────────────────────────────────────────────── */
+.cfqm-stat-cards { display:flex; flex-wrap:wrap; gap:16px; margin-bottom:24px; }
+.cfqm-stat-card  { background:#fff; border:1px solid #dde1e7; border-radius:6px; padding:16px 24px; min-width:140px; text-align:center; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+.cfqm-stat-value { display:block; font-size:28px; font-weight:700; color:#1a5276; }
+.cfqm-stat-label { display:block; font-size:12px; color:#6c7a89; text-transform:uppercase; letter-spacing:.3px; margin-top:4px; }
+
+/* ── Section titles ─────────────────────────────────────────────── */
+.cfqm-section-title { color:#1a5276; border-bottom:2px solid #1a5276; padding-bottom:4px; margin:28px 0 8px; }
+
+/* ── Settings form ──────────────────────────────────────────────── */
+.cfqm-settings .form-table th { width:200px; }
+
+/* ── Badges ─────────────────────────────────────────────────────── */
+.cfqm-badge { display:inline-block; padding:2px 8px; border-radius:20px; font-size:11px; font-weight:700; text-transform:uppercase; }
+.cfqm-badge--draft             { background:#e8e8e8; color:#555; }
+.cfqm-badge--sent              { background:#d6eaf8; color:#1a5276; }
+.cfqm-badge--viewed            { background:#d2f4f4; color:#0a6b6b; }
+.cfqm-badge--approved          { background:#d5f5e3; color:#1e8449; }
+.cfqm-badge--partial           { background:#d5f5e3; color:#1e8449; }
+.cfqm-badge--declined          { background:#fadbd8; color:#b03a2e; }
+.cfqm-badge--deposit_paid      { background:#1e8449; color:#fff; }
+.cfqm-badge--expired           { background:#e8e8e8; color:#888; }
+.cfqm-badge--pending_amendment { background:#fef9e7; color:#d68910; }
+.cfqm-badge--open              { background:#d5f5e3; color:#1e8449; }
+.cfqm-badge--quotes_full       { background:#fef9e7; color:#d68910; }
+.cfqm-badge--included          { background:#d5f5e3; color:#1e8449; }
+.cfqm-badge--optional          { background:#d6eaf8; color:#1a5276; }
+
+/* ── Timeline ───────────────────────────────────────────────────── */
+.cfqm-timeline { list-style:none; padding:0; margin:0; }
+.cfqm-timeline li { padding:7px 0 7px 16px; border-left:3px solid #2271b1; margin-left:8px; font-size:13px; position:relative; }
+.cfqm-timeline li::before { content:''; position:absolute; left:-6px; top:12px; width:9px; height:9px; background:#2271b1; border-radius:50%; }
+.evt-time { color:#888; font-size:11px; margin-left:8px; }
+
+/* ── Meta grid ──────────────────────────────────────────────────── */
+.cfqm-meta-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px 24px; }
+.cfqm-meta-grid label { font-weight:600; display:block; margin-bottom:4px; }
+.cfqm-meta-grid .full-width { grid-column:1/-1; }
+.cfqm-meta-grid input, .cfqm-meta-grid select, .cfqm-meta-grid textarea { width:100%; }
+
+/* ── Areas table ────────────────────────────────────────────────── */
+.cfqm-areas-table { width:100%; border-collapse:collapse; font-size:13px; }
+.cfqm-areas-table th { background:#f0f4f8; padding:6px 10px; text-align:left; border:1px solid #ddd; }
+.cfqm-areas-table td { padding:6px 10px; border:1px solid #ddd; }
+
+/* ── Query meta grid ────────────────────────────────────────────── */
+.cfqm-query-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; }
+.cfqm-query-grid label { font-weight:600; display:block; margin-bottom:2px; }
+.cfqm-query-grid .full { grid-column:1/-1; }
+
+/* ── Quote meta ─────────────────────────────────────────────────── */
+.cfqm-qmeta { display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; }
+.cfqm-qmeta label { font-weight:600; display:block; margin-bottom:2px; color:#23282d; }
+.cfqm-qmeta .full { grid-column:1/-1; }
+
+/* ── Dashboard table ────────────────────────────────────────────── */
+.cfqm-admin-dashboard .wp-list-table { margin-top:0; }
+.cfqm-admin-dashboard h2 { color:#1a5276; }

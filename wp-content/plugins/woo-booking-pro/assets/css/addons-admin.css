@@ -1,0 +1,55 @@
+/* WooBooking Pro — Add-ons Admin: mirrors woocommerce-product-addons styles */
+
+/* Tab icon */
+#woocommerce-product-data ul.product_data_tabs li.addons_tab a:before {
+    content: "\f502";
+}
+
+/* Panel */
+#wbp_product_addons_data { min-height: 0; }
+
+/* Toolbar open/close: hidden until 2+ groups */
+#wbp_product_addons_data .wbp-toolbar-openclose { display: none; }
+
+/* Import/export textareas */
+#wbp_product_addons_data textarea.export,
+#wbp_product_addons_data textarea.import {
+    width: 100%;
+    display: none;
+    margin: 10px 0 0;
+}
+#wbp_product_addons_data .wbp-import-export { float: right; }
+
+/* Addon metabox: type select */
+#wbp_product_addons_data .woocommerce_product_addon .product_addon_type { float: none; }
+
+/* Options inner table */
+#wbp_product_addons_data .woocommerce_product_addon .data table {
+    padding: 0;
+    border: 1px solid #ececec;
+}
+#wbp_product_addons_data .woocommerce_product_addon .data table td { padding: 6px; }
+#wbp_product_addons_data .woocommerce_product_addon .data table thead th {
+    background: #ececec;
+    padding: 5px;
+}
+#wbp_product_addons_data .woocommerce_product_addon .data table tfoot td {
+    border-top: 1px solid #ececec;
+    padding: 6px;
+}
+#wbp_product_addons_data .woocommerce_product_addon .data input { min-width: 50px; }
+
+/* Metabox label fixes (same as original) */
+.woocommerce_product_addons td.postbox              { padding: 0 !important; }
+.woocommerce_product_addons td label                { margin: 0; width: auto; }
+.woocommerce_product_addons .addon_required label   { display: block; float: none; }
+.woocommerce_product_addons .addon_required input   { width: 16px !important; min-width: 0 !important; }
+
+/* Min/Max column: two inputs side by side */
+.wc-metaboxes-wrapper .wc-metabox table td.minmax_column input {
+    width: 48%;
+    margin-right: 3%;
+}
+.wc-metaboxes-wrapper .wc-metabox table td.minmax_column input:nth-of-type(2) {
+    margin-right: 0;
+}
