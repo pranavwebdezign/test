@@ -1,0 +1,11 @@
+# Set PHP 8.3 handler (required for CloudLinux PHP Selector on cPanel)
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php83 .php .php8 .phtml
+</IfModule>
+
+# Route all requests through Laravel's public/index.php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/public
+    RewriteRule ^(.*)$ public/$1 [L,QSA]
+</IfModule>

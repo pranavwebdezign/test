@@ -1,0 +1,26 @@
+# ── Security headers ─────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ── CORS for GraphQL endpoint ─────────────────────────────────────────────────
+<IfModule mod_headers.c>
+    SetEnvIf Origin "https://wp-auditor.webdezign.uk" CORS_ALLOW=1
+    Header always set Access-Control-Allow-Origin "https://wp-auditor.webdezign.uk" env=CORS_ALLOW
+    Header always set Access-Control-Allow-Credentials "true" env=CORS_ALLOW
+    Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" env=CORS_ALLOW
+    Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With" env=CORS_ALLOW
+</IfModule>
+
+# ── Handle OPTIONS preflight ──────────────────────────────────────────────────
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# ── Force all requests through Laravel's public/index.php ────────────────────
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]

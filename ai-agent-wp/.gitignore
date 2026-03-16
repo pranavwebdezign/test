@@ -1,0 +1,28 @@
+# ── Laravel Backend ──────────────────────────────────────────
+ai-agent-backend/.env
+ai-agent-backend/vendor/
+ai-agent-backend/node_modules/
+ai-agent-backend/storage/logs/*.log
+ai-agent-backend/storage/framework/cache/
+ai-agent-backend/storage/framework/sessions/
+ai-agent-backend/storage/framework/views/
+ai-agent-backend/bootstrap/cache/*.php
+ai-agent-backend/public/hot
+ai-agent-backend/public/storage
+ai-agent-backend/.phpunit.result.cache
+ai-agent-backend/database/*.sqlite
+
+# ── React / Vite Frontend ─────────────────────────────────────
+ai-agent-wp/node_modules/
+ai-agent-wp/dist/
+ai-agent-wp/.env.local
+ai-agent-wp/.env.*.local
+ai-agent-wp/build-errors.txt
+ai-agent-wp/docker-build-log.txt
+ai-agent-wp/docker-verbose*.txt
+
+# ── General ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+*.zip
